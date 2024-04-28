@@ -1,0 +1,853 @@
+
+
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+:root{
+    --headColor:orangered;
+    --noFinal: no-repeat;
+    --GborderRadius: 10px;
+    --paraFont : Georgia, 'Times New Roman', Times, serif;
+    --paraColor: #0a0a0a;
+    --UColor:black;
+    --finalNavy : navy;
+    --handWrite:forte;
+}
+body{
+   margin: 50px; 
+   background-color: var(--finalNavy);
+   background-repeat: repeat;
+   background-size: cover;
+   
+}
+#container{
+    visibility: visible;
+}
+/** Heading Text **/
+header{
+    height: 20em;
+    background-image: url(earthBack2.jpg);
+    background-repeat: var(--noFinal);
+    background-size: 100%;
+    background-color: skyblue;
+   h1{
+    color: var(--headColor);
+    font-size: 30px;
+    position: absolute;
+    top:20%;
+    left:10%;
+    text-align: center;
+    font-family: cursive;
+   } 
+}
+
+
+/* Action animation */
+.action-call h2{
+    font-size:small;
+    animation: sixze 5s ease-in-out infinite;
+    color:var(--headColor);
+}
+@keyframes sixze{
+  50%{
+    color:black;
+  }
+}
+
+/* Header Side Text */
+#quizBox{
+    width: 300px;
+    padding: 130px 40px;
+    margin-left: 12%;
+    h2{
+    font-size: larger;
+    }
+    p{
+        font-family: var(--paraFont);
+        font-size: 18px;
+        width: 300px;
+        display: inline-block;
+        color: var(--paraColor);
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    a{
+        font-size: medium;
+        padding: 10px 15px;
+        border-radius: var(--GborderRadius);
+        color: cadetblue;
+        background-color: var(--UColor);
+        text-decoration:none;
+        transition: 1.5s;
+    }
+    a:hover{
+        background-color: white;
+    }
+    
+}
+/* Quiz popup box */
+#quizWidget{
+  background-color: #fff; 
+  width:50%;
+  margin:5% 25%;
+  padding: 50px;
+  padding-top: 20px;
+  border-radius: 10px;
+  display: none;
+}
+#quizWidget h1 {
+    font-size:xx-large;
+    font-weight: 200;
+    font-family: Jokerman;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #111;
+}
+#quizWidget h1::first-letter{
+    color: blue;
+}
+#quizWidget h1::first-line{
+    color: green;
+}
+#quiz{
+    padding: auto 5% 5%;
+}
+#quiz h2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: papyrus;
+    font-size: large;
+}
+#quiz .ops{
+    width: 90%;
+    padding:10px 0px;
+    margin-bottom:15px;
+    background-color: #fff;
+    border: 1px solid silver;
+    border-radius: 5px;
+    transition: 0.5s;
+    color: #000;
+}
+#quiz .ops:hover:not(:disabled){
+    background-color: #000;
+    color: #fff;
+}
+.ops:hover:disabled{
+    cursor: no-drop;
+}
+#quiz #nextBtn{
+    width:40%;
+    padding: 10px 5px;
+    margin:auto 25% 10px;
+    background-color: #2200ff;
+    border: 1px solid silver;
+    color: #fff;
+    display: block;
+}
+#quiz #closeBtn{
+    padding: 10px 12px;
+    position: absolute;
+    top:calc(5% + 85px);
+    left:calc(70% - 50px);
+    background-color: red;
+    display: block;
+}
+#quiz .ops.correct{
+    background-color: #33c25b;
+}
+#quiz .ops.incorrect{
+    background-color: #e92424;
+}
+/*The quiz link*/
+#linkQuizA{
+    position: relative;
+    left:25%;
+}
+/** Side Article['Did you know'] **/
+section article.facts{
+   background-color: gold;
+   background-image: url(background.gif);
+   background-repeat: no-repeat;
+   background-position: top left;
+   width: 40%;
+   height: 250px;
+   padding: 70px;
+   padding-top: 10px;
+   border-top: 5px dashed var(--finalNavy);
+   border-left: 5px dashed var(--finalNavy);
+   float:right;
+
+   h2{
+    font-family: var(--handWrite);
+    position: relative;
+    padding-top: 10px;
+    }
+    p{
+    font-family: var(--paraFont);
+    padding-top:20px;
+    }
+
+}
+   
+/* Celebrate */
+section #whyBox{
+  background-color: var(--headColor);
+  background-image: url(earth2.png);
+  background-repeat: var(--noFinal);
+  background-size: 25%;
+  background-position: 80% 40%;
+  width:60%;
+  height: 250px;
+  padding:70px;
+  padding-top: 20px;
+  border-top: 5px dashed var(--finalNavy);
+  border-right:5px dashed var(--finalNavy); 
+  box-sizing: border-box;
+  h2{
+    font-family: var(--handWrite);
+    position: relative;
+    padding-top: 20px;
+    }p{
+        padding-top: 20px;
+        width:45%;
+    }
+}    
+/* Help */
+section #helpBox{
+  background-color: var(--headColor);
+  background-image: url(earth3.png);
+  background-repeat: var(--noFinal);
+  background-size: 25%;
+  background-position: 85% 40%;
+  width:60%;
+  height: 250px;
+  padding:70px;
+  padding-top: 10px;
+  border-top: 5px dashed var(--finalNavy);
+  border-right:5px dashed var(--finalNavy); 
+
+  h2{
+    font-family: var(--handWrite);
+    position: relative;
+    padding-top:10px;
+    width: 70%;
+    }
+    p{
+        font-family: var(--paraFont);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width:60%;
+        font-weight: 500;
+    }
+    ul li{
+    font-weight: bold;
+    color:#0a0425;
+    list-style-type:circle;
+    }
+}
+
+
+/* Inspiration */
+.testimonial{
+    background-color: var(--headColor);
+    background-image: url(earth6.png);
+    background-repeat: var(--noFinal);
+    background-size: 25%;
+    background-position: 80% 40%;
+    width:60%;
+    height: 250px;
+    padding:70px;
+    padding-top: 20px;
+    border-top: 5px dashed var(--finalNavy);
+    border-right:5px dashed var(--finalNavy); 
+    box-sizing: border-box;
+
+    h2{
+        font-family: var(--handWrite);
+        position: relative;
+        padding-top: 20px;
+    }
+    p{
+        font-family: var(--paraFont);
+        padding-top: 10px;
+        width:45%; 
+    }
+}
+
+/* Events */
+.events{
+    background-color: var(--headColor);
+    background-image: url(earth4.png);
+    background-repeat: var(--noFinal);
+    background-size: 25%;
+    background-position: 80% 40%;
+    width:60%;
+    height: 250px;
+    padding:70px;
+    padding-top: 20px;
+    border-top: 5px dashed var(--finalNavy);
+    border-right:5px dashed var(--finalNavy); 
+    box-sizing: border-box;
+
+    h2{
+        font-family: var(--handWrite);
+        position: relative;
+        padding-top: 20px;
+    }
+    p{
+        font-family: var(--paraFont);
+        padding-top: 20px;
+        width:55%;  
+    }
+    
+}
+footer{
+    background-color: orchid;
+    width: 100%;
+    height: 75px;
+    padding:20px;
+    box-sizing: border-box;
+    border-top: 5px dashed var(--finalNavy);
+    border-bottom: 5px dashed var(--finalNavy);
+ p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100%;
+    padding-left: 30%;
+  }
+}
+/* Slider */
+
+.slider .list .item{
+    display: none;
+}
+
+.slider .list .item.active{
+    display: block;
+}
+
+#swipe{
+    position: absolute;
+    top:90%;
+    left:20%;
+    font-size: 40px;
+    display: flex;
+}
+.radio{
+    background-color:#e24208;
+    border-radius: 360%;
+    border: 2px solid blue;
+    width:20px;
+    height: 20px;
+    margin-left: 20px;
+    transition: 0.75s;
+}
+.radio:hover{
+  background-color: white;
+}
+.radio.checked{
+    background-color: white;
+}
+
+@media screen and (max-width: 20em) , screen and (max-width: 35em) , screen and (max-width: 48em) and (orientation: portrait) {
+    body{
+        margin: 5px;
+    }
+    header{
+        height: 20em;
+        background-size: cover; 
+        box-sizing: border-box;
+        overflow:hidden;
+    h1{
+        position: absolute;
+        top:10%;
+        left:15%;
+        font-size: 15px;
+        width:200px;
+        text-align: center;
+     }
+    }
+    #quizBox{
+        width: 200px;
+        padding: 150px 50px;
+        overflow:hidden;
+        h2{
+            font-size: small;
+            position: relative;
+            left:20%;
+            padding-top: 5%;
+        }
+        p{
+            font-size: 11px;
+            width: 150px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+        a{
+            display: inline-block;
+            font-size: smaller;
+            padding: 5px 10px;
+        }
+     }
+    section article.facts{
+        background-position: top left;
+        background-size: 15%;
+        width: 100%;
+        height: 250px;
+        padding: 20px;
+        padding-top: 5px;
+        border-left: none;
+        overflow:hidden;
+        h2{
+            position: relative;
+            left:5%;
+            padding-top: 5px;
+        }
+    }
+    #quizWidget{
+        background-color: #fff; 
+        width:90%;
+        margin:5%;
+        padding: 50px;
+        padding-top: 20px;
+        border-radius: 10px;
+        display: none;
+      }
+      #quizWidget h1 {
+          font-size:large;
+          font-weight: 200;
+          font-family: Jokerman;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #111;
+      }
+      #quiz .ops.correct{
+          background-color: #33c25b;
+      }
+      #quiz .ops.incorrect{
+          background-color: #e92424;
+      }  
+      #quiz #closeBtn{
+        padding: 5px 10px;
+        position: absolute;
+        top:calc(5% + 35px);
+        left:calc(90% - 50px);
+        background-color: red;
+        display: block; 
+      }
+     /* sliding divisions */
+     section #whyBox , section #helpBox , .testimonial , .events {
+        background-size: 25%;
+        background-position: 50% 30%;
+        border-right: none;
+        width:100%;
+        height: 250px;
+        padding: 20px 60px 300px 20px;
+        overflow:hidden;
+      }
+      section #whyBox h2 , section #helpBox h2 , .testimonial h2, .events h2{
+          padding-top: 5px;
+          padding-left: 25px;
+          width:150%;
+          font-size:large;
+      }
+      section #whyBox p , section #helpBox p , .testimonial p, .events p{
+          padding-top: 100px;
+          font-size: medium;
+          width:120%;
+      }
+      /* Help */
+      section #helpBox{
+        background-size: 35%;
+        background-position: 50% 45%;
+        box-sizing:border-box;
+        h2{
+            position: relative;
+            padding-top:10px;
+            width: max-content;
+        }
+        p{
+            font-size: small;
+            padding: 5px 50px 20px 0px;
+            width:140%;
+        }
+        ul{
+            padding-left: 20px;
+            padding-top:65px;
+            width: 120%;
+            li{
+                font-size: small;
+            }
+        }
+      }  
+      /* Inspiration */
+      .testimonial{
+          background-size: 25%;
+          background-position: 50% 50%;
+          padding-top: 20px; 
+
+        h2{
+            position: relative;
+            padding-top: 20px;
+        }
+        p{
+            width:120%;
+            padding-top: 10px;
+            padding-left: 15px;
+            font-size: small;
+       }
+       p:last-child{
+         width:120%;
+         padding-top: 100px;
+         padding-left: 15px;
+         font-size: medium;
+       }
+    }
+   
+      /* Events */
+      .events{
+          background-size:30%;
+          background-position: 50% 40%;
+          padding-top: 20px;
+          h2{
+            position: relative;
+            left:40px;
+            padding-top: 20px;
+         }
+          p{ 
+            font-size: medium;
+            padding-top: 120px;
+         }
+      }
+      footer{
+          width: 100%;
+          height: 55px;
+          padding-right:280px;
+          position: relative;
+          bottom:10px;
+       p{
+          font-size: small;
+          width:max-content;
+        }
+     }
+      /* Slider */
+
+      .slider .list .item.active{
+          display: inline-block;
+      }
+      
+      #swipe{
+          position: absolute;
+          top: 21.5em;
+          display: flex;
+      }
+      .radio{
+          width:15px;
+          height: 15px;
+          margin-left: 25px;
+      }
+   }
+@media screen and (min-width:25em) and (max-width :35em){
+    header{
+        box-sizing: border-box;
+        overflow:hidden;
+    }
+    #quizBox{
+        width: 200px;
+        padding: 150px 50px;
+        overflow:hidden;
+        h2{
+            font-size: small;
+            position: relative;
+            left:8%;
+            padding-top: 2%;
+        }
+        p{
+            font-size: 11px;
+            width: 150px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        a{
+            display: inline-block;
+            font-size: smaller;
+            padding: 5px 10px;
+            position: relative;
+            bottom:10px;
+        }
+     }
+    section #whyBox{
+        background-size: 40%;
+        p{
+            width:fit-content;
+            padding-left: 10%;
+            padding-top: 45%;
+            font-size: large;
+        }
+    }
+    header h1{
+        position: absolute;
+        top:5%;
+        left:15%;
+        font-size: 15px;
+        width:300px;
+        text-align: center;
+    } 
+     section #helpBox{
+        background-size: 30%;
+        background-position: 45% 45%;
+        h2{
+            position: relative;
+            padding-top:10px;
+            width: max-content;
+        }
+        p{
+            font-size: small;
+            padding: 15px 50px 35px 40px;
+            position: relative;
+            bottom: 10px;
+            width:100%;
+        }
+        ul{
+            padding-left: 40px;
+            padding-top:70px;
+            width: 120%;
+            li{
+                font-size: small;
+            }
+        }
+      }  
+      /* Inspiration */
+      .testimonial{
+          background-size: 25%;
+          background-position: 50% 50%;
+          padding-top: 20px; 
+
+        h2{
+            position: relative;
+            padding-top: 20px;
+        }
+        p{
+            width:90%;
+            padding-top: 10px;
+            padding-left: 15px;
+            font-size: small;
+       }
+       p:last-child{
+         width:100%;
+         padding-top: 120px;
+         padding-left: 15px;
+         font-size: medium;
+       }
+    }
+   
+      /* Events */
+      .events{
+          background-size:30%;
+          background-position: 50% 40%;
+          padding-top: 20px;
+          h2{
+            position: relative;
+            left:40px;
+            padding-top: 20px;
+         }
+          p{ 
+            font-size: medium;
+            padding-top: 150px;
+         }
+      }
+      footer{
+          width: 100%;
+          height: 55px;
+          padding-right:280px;
+          position: relative;
+          bottom:10px;
+       p{
+          font-size: small;
+          width:max-content;
+        }
+     }
+     #swipe{
+        position: absolute;
+        top:24em;
+        display: flex;
+    }
+}
+@media screen and (width:48em){
+    body{
+        margin: 5px;
+    }
+    header{
+        height: 20em;
+        box-sizing: border-box;
+        overflow:hidden;
+    h1{
+        position: absolute;
+        top:5%;
+        font-size: 200%;
+        width:max-content;
+        text-align: center;
+     }
+    }
+    #quizBox{
+        width: 200px;
+        padding: 100px 10px;
+        position: relative;
+        overflow:hidden;
+        h2{
+            font-size: medium;
+            width: max-content;
+            position: relative;
+            left:20%;
+            padding-top: 5%;
+        }
+        p{
+            width: 350px;
+            padding-top: 10px;
+            padding-right: 140px;
+            padding-bottom: 20px;
+            font-size: medium;
+        }
+        a{
+            display: inline-block;
+            font-size: smaller;
+            padding: 5px 10px;
+            position: relative;
+            left:7.5%;
+        }
+     }
+    section article.facts{
+        background-position: top left;
+        background-size: 15%;
+        width: 100%;
+        height: 250px;
+        padding: 20px;
+        padding-top: 5px;
+        border-left: none;
+        overflow:hidden;
+        h2{
+            position: relative;
+            left:10%;
+            padding-top: 25px;
+        }
+        p{
+            width:50%;
+            padding-left: 40px;
+        }
+    }
+     /* sliding divisions */
+     section #whyBox , section #helpBox , .testimonial , .events {
+        background-size: 25%;
+        background-position: 80% 30%;
+        border-right: none;
+        width:100%;
+        height: 250px;
+        padding: 20px 60px 300px 40px;
+        overflow:hidden;
+      }
+      section #whyBox h2 , section #helpBox h2 , .testimonial h2, .events h2{
+          padding-top: 5px;
+          padding-left: 25px;
+          width:150%;
+          font-size:large;
+      }
+      section #whyBox p , section #helpBox p , .testimonial p, .events p{
+          padding-top: 50px;
+          font-size: large;
+          width:60%;
+          padding-left: 50px;
+      }
+      /* Help */
+      section #helpBox{
+        padding-right: 150px;
+        h2{
+            position: relative;
+            padding-top:10px;
+            width: max-content;
+        }
+        p{
+            font-size: medium;
+            padding: 10px 50px 20px 0px;
+        }
+        ul{
+            padding-left: 20px;
+            padding-top:5px;
+            width: 120%;
+            li{
+                font-size: medium;
+            }
+        }
+      }  
+      /* Inspiration */
+      .testimonial{
+          padding-top: 20px; 
+
+        h2{
+            position: relative;
+            padding-top: 20px;
+        }
+        p{
+            padding-top: 30px;
+            padding-left: 15px;
+            font-size: small;
+       }
+       p:last-child{
+         padding-left: 15px;
+         font-size: medium;
+       }
+    }
+   
+      /* Events */
+      .events{
+          padding-top: 20px;
+          h2{
+            position: relative;
+            left:40px;
+            padding-top: 20px;
+         }
+          p{ 
+            font-size: large;
+         }
+      }
+      
+      #swipe{
+          position: absolute;
+          top:21em;
+          display: flex;
+      }
+}
+@media (width:64em) {
+    section #whyBox , section #helpBox , .testimonial , .events {
+        height: 300px;
+        padding: 20px 60px 300px 40px;
+    } 
+    section .events p{
+        padding-top: 50px;
+        font-size: large;
+    }
+    section article.facts{
+        height: 300px;
+        padding: 20px;
+        padding-bottom: 300px;
+        h2{
+            position: relative;
+            left:10%;
+            padding-top: 5px;
+        }
+        p{
+            padding-top: 50px;
+            font-size: large;
+        }
+    }
+    #swipe{
+        position: absolute;
+        top:16em;
+        left:20%;
+    }
+}
+@media (width:90em) {
+    #swipe{
+        position: absolute;
+        top:14.5em;
+        left:20%;
+    }
+}
